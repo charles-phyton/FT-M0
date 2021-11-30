@@ -1,0 +1,11 @@
+h1{
+    border: 2px solid black;
+}
+#bordeRojo{
+
+    border: red;
+}
+
+.backgroundBlue{
+    background-color: rgb(187, 255, 0);
+}
