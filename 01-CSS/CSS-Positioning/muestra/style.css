@@ -1,0 +1,41 @@
+.contenedor{
+    width: 500px;
+    height: 500px;
+    background-color: red;
+    position: relative;
+    
+
+}
+
+.box1, .box2, .box3{
+    width: 100px;
+    height: 100px;
+}
+
+.box1{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: blue;
+    z-index: 0;
+    
+    
+}
+
+.box2{
+    z-index: 0;
+    background-color: yellow;
+}
+
+.box3{
+    background-color: green;
+}
+
+.fixed{
+    position: fixed;
+    top: 50px;
+    color: white;
+    font-size: 60px;
+}
