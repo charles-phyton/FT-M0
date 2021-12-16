@@ -41,8 +41,9 @@ function multiplicarNumeroDesconocidoPorCinco(objetoMisterioso) {
   // "objetoMisterioso" tiene una propiedad llamada "numeroMisterioso"
   // Multiplica el numeroMisterioso por 5 y devuelve el producto
   // Tu código:
-  var multi = objetoMisterioso.numeroMisterioso * 5;
-  return multi;
+  return objetoMisterioso.numeroMisterioso * 5;
+  
+  
 }
 
 function eliminarPropiedad(objeto, unaPropiedad) {
@@ -72,8 +73,17 @@ function tieneEmail(usuario) {
   // Devuelve "true" si el usuario tiene un valor definido para la propiedad "email"
   // De lo contratio, devuelve "false"
   // Tu código:
-  if (usuario.email) return true;
-  return false;
+
+  if (usuario.email === undefined || usuario.email === null ){
+    return false;
+  }else{
+    return true;
+  }
+
+  // if (objeto.hasOwnProperty(propiedad)){
+  //   return true;
+  // } 
+  // return false;
 }
 
 
@@ -83,7 +93,7 @@ function tienePropiedad(objeto, propiedad) {
   // De lo contrario, devuelve "false"
   // Tu código:
 
-  if (usuario[propiedad]) return true;
+  if (objeto[propiedad]) return true;
   return false;
 }
 
@@ -100,7 +110,7 @@ function actualizarPassword(usuario, nuevaPassword) {
   // Reemplaza la contraseña existente en el objeto "usuario" con el valor de "nuevaPassword"
   // Devuelve el objeto
   // Tu código:
-  usuario.password === nuevaPassword;
+  usuario.password = nuevaPassword;
   return usuario;
 }
 
@@ -152,8 +162,8 @@ function agregarMetodoCalculoDescuento(producto) {
   // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
   // Tu código:
   producto.calcularPrecioDescuento = function() {
-    var descuento = this.precio * this.porcentajeDescuento;
-    return this.precio - descuento;
+    var descuento = this.precio - (this.precio * this.porcentajeDeDescuento)
+    return descuento;
   }
   return producto;
 

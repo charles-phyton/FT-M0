@@ -34,10 +34,10 @@ function crearUsuario() {
 
 class Usuario{
   constructor(Opciones){
-  this.usuario = opciones.usuario;
-  this.nombre = opciones.nombre;
-  this.email = opciones.email;
-  this.password = opciones.password;
+  this.usuario = Opciones.usuario;
+  this.nombre = Opciones.nombre;
+  this.email = Opciones.email;
+  this.password = Opciones.password;
 
   }
   saludar(){
