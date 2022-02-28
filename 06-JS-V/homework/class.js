@@ -38,8 +38,8 @@ class FabricaDeCamiones extends FabricaDeAutos2 {
     }
 }
 
-// var camion = new FabricaDeCamiones();
-// console.log(camion);
+var camion = new FabricaDeCamiones();
+console.log(camion);
 
 // FabricaDeAutos.prototype.verificarRuedas = function() {
 //     if(typeof this.ruedas === "number"){

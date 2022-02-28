@@ -67,19 +67,17 @@ function agregarStringInvertida() {
   // 'toni'.reverse() => 'inot'
   // Pista: Necesitarás usar "this" dentro de "reverse"
 
-  String.prototype.reverse = function(){
-    var reversedString = ''
+  String.prototype.reverse = function (){
+    var reversedString = "";
 
-    for (let i = this.length -1; i > 0; i--) {
-      reversedString = reversedString + this[i];
+    for (let i = this.length -1; i >= 0; i--) {
+      reversedString = reversedString + this.charAt(i);
         
+    }
+    return reversedString;
+ 
   }
-
-  return reversedString;
-
-  }
-
-
+  
 }
 
 // ---------------------------------------------------------------------------//
@@ -102,15 +100,13 @@ function agregarStringInvertida() {
       this.edad = edad;
       this.domicilio = domicilio;
 
-
-
     }
-    detalle(){
+    detalle = function(){
       return {
         Nombre: this.nombre,
         Apellido: this.apellido,
         Edad: this.edad,
-        Domicilio: this.domicilio,
+        Domicilio: this.domicilio
 
       
       }
@@ -123,7 +119,7 @@ function crearInstanciaPersona(nombre, apellido, edad, dir) {
   //Recibirá los valores "Juan", "Perez", 22, "Saavedra 123" para sus respectivas propiedades
   //Devolver la nueva persona creada
 
-  return new Persona(ombre, apellido, edad, dir)
+  return new Persona(nombre, apellido, edad, dir);
 
 }
   
